@@ -6,6 +6,7 @@ ENV/
 .idea
 .DS_Store
 .history
+.env
 
 
 # Byte-compiled / optimized / DLL files
@@ -85,7 +86,7 @@ target/
 
 # pyenv
 .python-version
-
+.env
 # celery beat schedule file
 celerybeat-schedule
 
@@ -93,13 +94,14 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-.env
+cookie_stands_project/.env
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+.env
 
 # Spyder project settings
 .spyderproject

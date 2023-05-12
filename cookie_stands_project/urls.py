@@ -1,5 +1,5 @@
 """
-URL configuration for games_project project.
+URL configuration for cookie_stands_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -20,7 +20,7 @@ from rest_framework_simplejwt import views as jwt_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/Games/', include('games.urls')),
+    path('api/v1/cookie_stands/', include('cookie_stands.urls')),
     path('api-auth', include('rest_framework.urls')),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
