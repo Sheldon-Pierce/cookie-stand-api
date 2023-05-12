@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+from datetime import timedelta
 import rest_framework.authentication
 import environ
 
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # 3rd party app
     'rest_framework',
     'whitenoise',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +61,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'cookie_stands_project.urls'
@@ -159,4 +161,31 @@ REST_FRAMEWORK = {
     ],
 }
 
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(
+        seconds=60 * 60
+    ),  # lasts for 60 minutes
+}
 
+# Allow requests from any origin
+CORS_ALLOW_ALL_ORIGINS = True
+
+# Allow specific origins
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
+
+# Allow specific HTTP methods
+CORS_ALLOWED_METHODS = [
+    'GET',
+    'POST',
+    'DELETE'
+]
+
+# Allow specific HTTP headers
+CORS_ALLOWED_HEADERS = [
+    'X-CSRFToken',
+    'Content-Type',
+]
+
+CORS_ORIGIN_WHITELIST = []

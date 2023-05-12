@@ -5,7 +5,7 @@ from django.db import models
 class CookieStand(models.Model):
     location = models.CharField(max_length=256)
     owner = models.ForeignKey(
-        get_user_model(), on_delete=models.CASCADE, null=True, blank=True
+        get_user_model(), on_delete=models.CASCADE, blank=True
     )
     description = models.TextField(blank=True)
     hourly_sales = models.JSONField(default=list, null=True)
