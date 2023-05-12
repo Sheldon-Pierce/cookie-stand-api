@@ -14,7 +14,7 @@ How to initialize/run your application (where applicable)
   - docker compose run web python manage.py createsuperuser
   - docker compose run web python manage.py collectstatic
   - change site to localhost:8000
-  - To see JSON data go to localhost:8000/api/v1/Games/
+  - To see JSON data go to localhost:8000/api/v1/cookie_stands/
   - To shut down properly docker compose down
 
 ```
@@ -28,5 +28,5 @@ Tests
     - Refreshing auto token
         - http :8000/api/refresh
     - Checking data
-        - http :8000/api/v1/Games/ username=*yourusername* password=*yourpassword*
+        - http :8000/api/v1/cookie_stands/ username=*yourusername* password=*yourpassword*
 ```
