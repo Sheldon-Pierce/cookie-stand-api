@@ -14,10 +14,19 @@ How to initialize/run your application (where applicable)
   - docker compose run web python manage.py createsuperuser
   - docker compose run web python manage.py collectstatic
   - change site to localhost:8000
-  - To see JSON data go to localhost:8000/api/v1/cookie_stands/
+  - To see JSON data go to https://cookie-stand-api-sheldon-2qrah5q0o-sheldon-pierce.vercel.app/api/v1/cookie_stands/
   - To shut down properly docker compose down
 
 ```
+
+Vercel App 
+
+```
+    - To see JSON data go to https://cookie-stand-api-sheldon-2qrah5q0o-sheldon-pierce.vercel.app/api/v1/cookie_stands/
+
+```
+
+
 
 Tests
 - How do you run tests?
